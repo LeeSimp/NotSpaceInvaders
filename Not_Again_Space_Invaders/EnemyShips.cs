@@ -40,13 +40,13 @@ namespace Not_Again_Space_Invaders
             {
                 for (int j = 0; j < enemyArray.GetUpperBound(1); j++)
                 {
-                    if(enemyArray[enemyArray.GetUpperBound(0), j].Position.X + enemyArray[enemyArray.GetUpperBound(1), j].Texture.Width
+                    if (enemyArray[enemyArray.GetUpperBound(0), j].Position.X + enemyArray[enemyArray.GetUpperBound(1), j].Texture.Width
                         >= inGraphics.PreferredBackBufferWidth)
                     {
                         moveLeft = true;
                         moveRight = false;
                     }
-                    if(enemyArray[0, j].Position.X <=0)
+                    if (enemyArray[i, j].Position.X <= 0)
                     {
                         moveRight = true;
                         moveLeft = false;
@@ -54,7 +54,8 @@ namespace Not_Again_Space_Invaders
                 }
             }
 
-            foreach(Enemy e in enemyArray)
+
+            foreach (Enemy e in enemyArray)
             {
                 if(moveRight)
                 {

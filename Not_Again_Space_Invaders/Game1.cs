@@ -69,7 +69,12 @@ namespace Not_Again_Space_Invaders
             foreach(Enemy e in shipArray)
             {
                 Collided = e.checkCollided(bulletsprite);
-                if(Collided)
+                if(Collided == true)
+                {
+                    e.isdrawn = false;
+                    e.Position = new Rectangle (e.Position.X, 1000, 10, 10);
+                    bulletsprite.InitialPosition(player1);
+                }
             }
 
             player1.DrawSprite(_spriteBatch);

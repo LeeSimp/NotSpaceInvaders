@@ -20,6 +20,7 @@ namespace Not_Again_Space_Invaders
 
         public void InitialPosition(Sprite insprite)
         {
+            fired = false;
             xposition = insprite.Position.X + spritetexture.Width / 2 - 5;
             spritePosition = new Rectangle(xposition, insprite.Position.Y, 10, 10);
             yposition = spritePosition.Y;
@@ -31,7 +32,7 @@ namespace Not_Again_Space_Invaders
                 fired = true;
             }
 
-            if(spritePosition.Y > 0 && fired == true )
+            if(spritePosition.Y > 0 && fired == true)
             {
                 spritePosition = new Rectangle(xposition, yposition, 10, 10);
                 yposition -= 10;
